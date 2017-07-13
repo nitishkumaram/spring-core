@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean name="emp" class="com.lazy.initialization.example.Employee">
+		<property name="empno" value="1001"></property>
+		<property name="ename" value="jayesh"></property>
+		<property name="address" ref="add"></property>
+	</bean>
+
+	<bean name="add" class="com.lazy.initialization.example.Address" lazy-init="true">
+
+	</bean>
+
+</beans>

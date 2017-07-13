@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id="employee" class="com.employee.example.Employee">
+		<constructor-arg>
+
+
+			<bean  class="com.employee.example.Address">
+				<property name="state" value="Karnatka"></property>
+				<property name="city" value="Bagalore"></property>
+				<property name="country" value="India"></property>
+				<property name="street" value="Bhanshankri"></property>
+			</bean>
+
+		</constructor-arg>
+		<property name="empno" value="1001"></property>
+		<property name="ename" value="jayesh"></property>
+		<property name="email" value="jayesh@gmail.com"></property>
+
+		<property name="mobiles">
+			<list>
+				<value>9590102022</value>
+				<value>9590102023</value>
+				<value>9590102024</value>
+				<value>9590102025</value>
+			</list>
+
+		</property>
+		<property name="qualification">
+			<map>
+				<entry key="2001" value="SSC"></entry>
+				<entry key="2003" value="HSC"></entry>
+				<entry key="2007" value="B.E"></entry>
+			</map>
+		</property>
+
+		<property name="familyMembers">
+			<bean class="org.springframework.beans.factory.config.ListFactoryBean">
+				<property name="targetListClass">
+					<value>java.util.ArrayList</value>
+				</property>
+				<property name="sourceList">
+					<list>
+						<value>Bharath</value>
+						<value>Priti</value>
+					</list>
+				</property>
+			</bean>
+		</property>
+	</bean>
+
+
+</beans>

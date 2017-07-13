@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean name="employeeobj" class="assignment3.Employee">
+		<property name="empno" value="1001"></property>
+		<property name="ename" value="Jayesh"></property>
+		<property name="mobiles" value="9590102022"></property>
+		<property name="email" value="jayeshsyif@gmail.com"></property>
+		<property name="address">
+			<bean class="assignment3.Address">
+				<property name="city" value="Bangalore"></property>
+				<property name="country" value="India"></property>
+				<property name="state" value="Karnataka"></property>
+				<property name="street" value="M.G.Road"></property>
+			</bean>
+		</property>
+	</bean>
+
+</beans>

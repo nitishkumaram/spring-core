@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean name="developer" class="assignment5.Developer"></bean>
+	<bean name="trainer" class="assignment5.Trainee"></bean>
+	<bean name="trainee" class="assignment5.Trainee"></bean>
+
+	<bean name="factory" class="assignment5.Service">
+		<property name="map">
+			<map>
+				<entry key="developer" value-ref="developer"></entry>
+				<entry key="trainer" value-ref="trainer"></entry>
+				<entry key="trainee" value-ref="trainee"></entry>
+			</map>
+		</property>
+
+	</bean>
+</beans>

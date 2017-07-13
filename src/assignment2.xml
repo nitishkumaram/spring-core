@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean name="productlist" class="assignment2.ProductListClass">
+		<property name="productList">
+			<list >
+				<ref bean="product1"/>
+				<ref bean="product2"/>
+				<ref bean="product3"/>
+				<ref bean="product4"/>
+			</list>
+
+		</property>
+	</bean>
+	<bean name="product1" class="assignment2.Product">
+
+		<property name="pno" value="1001"></property>
+		<property name="pname" value="Marker"></property>
+		<property name="price" value="23.50"></property>
+	</bean>
+	<bean name="product2" class="assignment2.Product">
+
+		<property name="pno" value="1008"></property>
+		<property name="pname" value="White Marker"></property>
+		<property name="price" value="123.50"></property>
+	</bean>
+	<bean name="product3" class="assignment2.Product">
+		<property name="pno" value="1003"></property>
+		<property name="pname" value="Black Marker"></property>
+		<property name="price" value="233.50"></property>
+	</bean>
+		<bean name="product4" class="assignment2.Product">
+		<property name="pno" value="1005"></property>
+		<property name="pname" value="Pen"></property>
+		<property name="price" value="3.75"></property>
+	</bean>
+</beans>
+
